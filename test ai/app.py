@@ -14,15 +14,20 @@ CORS(app)
 
 
 # تحميل الموديل من Google Drive باستخدام الرابط المباشر
+MODEL_PATH = 'tomato_disease_model.h5'
+
 def download_model():
-    url = "https://drive.google.com/uc?export=download&id=1rKEc89IZBH026m8n5prDmxteABgF0bsC"  # الرابط المعدل
+    url = "https://drive.google.com/uc?export=download&id=1rKEc89IZBH026m8n5prDmxteABgF0bsC"
     response = requests.get(url)
-    with open('tomato_disease_model.h5', 'wb') as f:
+    with open(MODEL_PATH, 'wb') as f:
         f.write(response.content)
 
-# تحميل الموديل بعد تحميله
-download_model()
-model = tf.keras.models.load_model('tomato_disease_model.h5')
+# فقط حمّل الموديل لو مش موجود
+if not os.path.exists(MODEL_PATH):
+    download_model()
+
+# بعد التأكد من وجوده، حمّله
+model = tf.keras.models.load_model(MODEL_PATH)
 
 # Class names from your notebook
 class_names = [
