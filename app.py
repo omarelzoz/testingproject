@@ -13,7 +13,8 @@ CORS(app)
 # app = Flask(__name__)
 
 # Load the trained model
-model = tf.keras.models.load_model('tomato_disease_model.h5')  # You'll need to save your model first
+model = tf.keras.models.load_model('tomato_disease_model.h5')
+  # You'll need to save your model first
 
 # Class names from your notebook
 class_names = [
