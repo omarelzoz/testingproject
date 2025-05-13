@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #CCD9D3;
+}
+.navbar {
+    background-color: #1A553B; /* Green color for navbar */
+    height: 100px;
+    position: relative; /* Ensure the navbar is positioned */
+    z-index: 1000;
+}
+
+/* Container for centering content */
+.navbar-container {
+    margin-left: auto; /* Center content dynamically */
+    margin-right: auto;
+    padding: 0 20px; /* Add padding for smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and links */
+    height: 100%; /* Full height of navbar */
+}
+
+/* Navbar links styling */
+.nav-links {
+    margin: 0; /* Remove margin to center the links */
+    list-style: none;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 150px; /* Space between links */
+}
+
+/* Individual link styling */
+.nav-links a {
+    text-decoration: none;
+    color: white; /* White text color */
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+/* Logo styling */
+.logo img {
+    height: 90px; /* Adjust logo height as needed */
+    margin: 0 30px; /* Add space on both sides of the logo */
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+    background-color: #1ba539; /* Darker green on hover */
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #7ed682;
+}
+.carousel slide{
+    position: fixed ;
+}
+.carousel-item img {
+    width: 100%;
+   height: 700px;
+    object-fit: cover;
+}
+
+
+.containersection {
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    padding: 20px;
+}
+
+.content-section {
+    width: 95%; /* Makes the section wider */
+    text-align: left;
+    padding: 20px;
+    /* Optional: Light background to highlight the section */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+.content-section h1 {
+    font-size: 40px; /* Increases title font size */
+    color: #1A553B;
+}
+
+.content-section img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover; /* Ensures it fits within dimensions without stretching */
+    margin-bottom: 10px;
+}
+
+
+
+.logo-container {
+    position: fixed; /* Fix the position */
+    bottom: 20px; /* Distance from the bottom */
+    right: 80px; /* Distance from the right */
+    transition: transform 0.1s; /* Smooth transition for the spin */
+}
+
+.logo {
+    width: 150px; /* Adjust the size of the logo */
+    height: 150px;
+}
+
+
+  
+.cta-section {
+    background-color:   #CCD9D3; /* Or any contrasting color */
+    padding: 40px;
+    text-align: center;
+    color: #1A553B;
+}
+.cta-section h2 {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+footer {
+    background-color: #1A553B;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #7ed682;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.contact-info {
+    margin-top: 10px;
+}

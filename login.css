@@ -1,0 +1,48 @@
+
+body{
+    background-image: url('images/www-zanda-photography-RBdE3jv5y68-unsplash.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Center the background image */
+}
+/* Background container with image */
+.form-background {
+  
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Center the background image */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+   margin: 0;
+}
+
+/* Form styling */
+.form-content {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px 40px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+   
+}
+.form-content input{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.form-content label, 
+.form-content input
+ {
+    
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.form-content input:focus{
+    padding: 5px;
+    transition: all 0.5s ease;
+    color: white;
+}
+
