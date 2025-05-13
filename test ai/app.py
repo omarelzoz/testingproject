@@ -5,15 +5,24 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 import os
 from flask_cors import CORS
-
+import requests
 app = Flask(__name__)
 CORS(app)
 
 
 # app = Flask(__name__)
 
-# Load the trained model
-model = tf.keras.models.load_model('tomato_disease_model.h5')  # You'll need to save your model first
+
+# تحميل الموديل من Google Drive باستخدام الرابط المباشر
+def download_model():
+    url = "https://drive.google.com/uc?export=download&id=1rKEc89IZBH026m8n5prDmxteABgF0bsC"  # الرابط المعدل
+    response = requests.get(url)
+    with open('tomato_disease_model.h5', 'wb') as f:
+        f.write(response.content)
+
+# تحميل الموديل بعد تحميله
+download_model()
+model = tf.keras.models.load_model('tomato_disease_model.h5')
 
 # Class names from your notebook
 class_names = [
